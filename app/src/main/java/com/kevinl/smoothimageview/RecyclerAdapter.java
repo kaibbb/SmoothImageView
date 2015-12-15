@@ -13,8 +13,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.kevinl.zoomimagevieww.R;
-
+ho
 /**
  * Author: liuk
  * Created at: 15/12/15
