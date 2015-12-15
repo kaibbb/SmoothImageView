@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.kevinl.zoomimagevieww"
+        applicationId "com.kevinl.smoothimageview"
         minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
