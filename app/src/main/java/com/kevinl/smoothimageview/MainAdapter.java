@@ -18,24 +18,24 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
  * Author: liuk
  * Created at: 15/12/15
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Holder> {
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.Holder> {
     private Activity activity;
     private String[] urls;
 
-    public RecyclerAdapter(Activity activity, String[] urls) {
+    public MainAdapter(Activity activity, String[] urls) {
         this.activity = activity;
         this.urls = urls;
     }
 
     @Override
-    public RecyclerAdapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MainAdapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(activity).inflate(R.layout.recycler_item, parent, false);
         Holder viewHolder = new Holder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerAdapter.Holder holder, final int position) {
+    public void onBindViewHolder(MainAdapter.Holder holder, final int position) {
         Glide.with(activity)
                 .load(urls[position])
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
@@ -46,7 +46,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Holder
             @Override
             public void onClick(View v) {
                 int[] location = new int[2];
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                     Rect frame = new Rect();
                     activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
                     int statusBarHeight = frame.top;

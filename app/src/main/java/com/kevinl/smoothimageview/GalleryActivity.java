@@ -35,6 +35,8 @@ public class GalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
 
+        viewPager = (ViewPager) findViewById(R.id.vp);
+
         Intent intent = getIntent();
         if (intent != null) {
             Bundle b = intent.getExtras();
@@ -47,7 +49,6 @@ public class GalleryActivity extends AppCompatActivity {
             locationH = intent.getIntExtra(PHOTO_SELECT_H_TAG, 0);
         }
 
-        viewPager = (ViewPager) findViewById(R.id.vp);
         galleryAdapter = new GalleryAdapter(this, urls, locationW, locationH, locationX, locationY, position);
         viewPager.setAdapter(galleryAdapter);
         viewPager.setCurrentItem(position);

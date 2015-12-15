@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
-    private RecyclerAdapter recyclerAdapter;
+    private MainAdapter mainAdapter;
 
     private String[] urls = {"http://img.1985t.com/uploads/attaches/2013/03/10471-GAAGE6.jpg",
             "http://b.hiphotos.baidu.com/image/pic/item/8435e5dde71190efa7aa1231ca1b9d16fcfa608f.jpg",
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerAdapter = new RecyclerAdapter(this, urls);
-        recyclerView.setAdapter(recyclerAdapter);
+
+        mainAdapter = new MainAdapter(this, urls);
+        recyclerView.setAdapter(mainAdapter);
     }
 }
