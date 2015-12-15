@@ -1,4 +1,4 @@
-package com.kevinl.zoomimageview;
+package com.kevinl.smoothimageview;
 
 import android.app.Activity;
 import android.content.Intent;

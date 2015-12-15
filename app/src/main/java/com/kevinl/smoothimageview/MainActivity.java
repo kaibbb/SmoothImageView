@@ -1,4 +1,4 @@
-package com.kevinl.zoomimageview;
+package com.kevinl.smoothimageview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

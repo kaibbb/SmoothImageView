@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.kevinl.zoomimageview.MainActivity"
+        <activity android:name="com.kevinl.smoothimageview.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/StatusBarTranslucent">
             <intent-filter>
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.kevinl.zoomimageview.GalleryActivity"
+        <activity android:name="com.kevinl.smoothimageview.GalleryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/StatusBarTranslucent"/>
     </application>
