@@ -22,6 +22,7 @@ import com.bumptech.glide.load.resource.gif.GifDrawable;
 /**
  * Author: liuk
  * Created at: 15/12/15
+ * @http://blog.csdn.net/zzhou910/article/details/26379795
  */
 public class SmoothImageView extends ImageView {
 
@@ -197,26 +198,9 @@ public class SmoothImageView extends ImageView {
 
         @Override
         public Object clone() throws CloneNotSupportedException {
-            // TODO Auto-generated method stub
             return super.clone();
         }
 
-    }
-
-    private void getCenterCropMatrix() {
-        if (getDrawable() == null) {
-            return;
-        }
-        if (mBitmap == null || mBitmap.isRecycled()) {
-            mBitmap = ((BitmapDrawable) getDrawable()).getBitmap();
-        }
-
-        float xScale = mOriginalWidth / ((float) mBitmap.getWidth());
-        float yScale = mOriginalHeight / ((float) mBitmap.getHeight());
-        float scale = xScale > yScale ? xScale : yScale;
-        mSmoothMatrix.reset();
-        mSmoothMatrix.setScale(scale, scale);
-        mSmoothMatrix.postTranslate(-(scale * mBitmap.getWidth() / 2 - mOriginalWidth / 2), -(scale * mBitmap.getHeight() / 2 - mOriginalHeight / 2));
     }
 
     private void getBmpMatrix() {
@@ -238,7 +222,7 @@ public class SmoothImageView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         if (getDrawable() == null) {
-            return; // couldn't resolve the URI
+            return;
         }
 
         if (mState == STATE_TRANSFORM_IN || mState == STATE_TRANSFORM_OUT) {
