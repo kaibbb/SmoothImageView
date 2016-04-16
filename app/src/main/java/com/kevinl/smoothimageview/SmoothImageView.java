@@ -348,9 +348,7 @@ public class SmoothImageView extends ImageView {
     private TransformListener mTransformListener;
 
     public static interface TransformListener {
-        /**
-         * @param mode STATE_TRANSFORM_IN 1 ,STATE_TRANSFORM_OUT 2
-         */
+        //mode STATE_TRANSFORM_IN 1 ,STATE_TRANSFORM_OUT 2
         void onTransformComplete(int mode);// mode 1
     }
 
