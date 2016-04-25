@@ -22,7 +22,6 @@ import com.bumptech.glide.load.resource.gif.GifDrawable;
 /**
  * Author: liuk
  * Created at: 15/12/15
- * @http://blog.csdn.net/zzhou910/article/details/26379795
  */
 public class SmoothImageView extends ImageView {
 
